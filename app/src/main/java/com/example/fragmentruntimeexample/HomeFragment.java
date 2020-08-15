@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // By clicking this button we can replace the home fragment with first fragment
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new FirstFragment(), null).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new FirstFragment(), null).addToBackStack(null).commit();
             }
         });
         return view;
